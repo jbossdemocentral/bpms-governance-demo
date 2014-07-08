@@ -12,13 +12,12 @@ Quickstart
 3. Copy this code snippet into your ~/.m2/settings.xml (authorization for s-ramp repository):
 
 ```
-    <!-- Added for BPM Suite Governance demo -->
-
-     <server>
-		 	<id>local-sramp-repo</id>
-		   <username>erics</username>
-		   <password>bpmsuite1!</password>
-		 </server>
+<!-- Added for BPM Suite Governance demo -->
+<server>
+  <id>local-sramp-repo</id>
+  <username>erics</username>
+  <password>bpmsuite1!</password>
+</server>
 ```
 
 4. Run 'init.sh'.
