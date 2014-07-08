@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<com.izforge.izpack.panels.HTMLLicencePanel id="HTMLLicencePanel"/>
+<com.izforge.izpack.panels.TargetPanel id="DirectoryPanel">
+	<installpath>${SYSTEM_user_dir}/target</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.TreePacksPanel id="TreePacksPanel">
+<pack index="0" name="Red Hat JBoss Enterprise Application Platform" selected="true"/>
+<pack index="1" name="DT-Gov run-time" selected="true"/>
+<pack index="2" name="DT-Gov quickstarts" selected="false"/>
+<pack index="3" name="S-RAMP run-time" selected="true"/>
+<pack index="4" name="S-RAMP quickstarts" selected="false"/>
+<pack index="5" name="Red Hat JBoss Governance quickstarts" selected="false"/>
+</com.izforge.izpack.panels.TreePacksPanel>
+<com.izforge.izpack.panels.UserInputPanel id="CreateUserPanel">
+<userInput>
+<entry key="adminPassword" value="22d445efa2ac1731547919c3c69f500b"/>
+<entry key="adminUser" value="erics"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="FSWCredentials">
+<userInput>
+<entry autoPrompt="true" key="fsw.password"/>
+<entry key="fsw.user" value="erics"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.MavenCheckPanel id="MavenSetup"/>
+<com.izforge.izpack.panels.UserInputPanel id="samlsecurity">
+<userInput>
+<entry autoPrompt="true" key="saml.storepass"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="JavaSecurityManager">
+<userInput>
+<entry key="jvm.security.enabled" value="false"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="postinstall">
+<userInput>
+<entry key="postinstallServer" value="false"/>
+<entry key="installSsl" value="off"/>
+<entry key="jdbc.driver.install" value="off"/>
+<entry key="installVault" value="off"/>
+<entry key="installLdap" value="off"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="vaultsecurity"/>
+<com.izforge.izpack.panels.UserInputPanel id="vaultsecuritypreexisting"/>
+<com.izforge.izpack.panels.UserInputPanel id="vaultsecuritydefault">
+<userInput>
+<entry autoPrompt="true" key="vault.keystorepwd"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="sslsecurity"/>
+<com.izforge.izpack.panels.UserInputPanel id="ldapsecurity"/>
+<com.izforge.izpack.panels.UserInputPanel id="ldapsecurity2"/>
+<com.redhat.installer.panels.JBossJDBCDriverSetupPanelFSW id="JDBC Setup Panel"/>
+<com.redhat.installer.panels.JBossDatasourceConfigPanel id="Datasource Configuration Panel"/>
+<com.izforge.izpack.panels.UserInputPanel id="DBDefaultConfiguration">
+<userInput>
+<entry key="db.url" value="jdbc:h2:file:${jboss.server.data.dir}/h2/sramp;mvcc=true"/>
+<entry key="db.user" value="erics"/>
+<entry key="db.password" value="bpmsuite1!"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.SummaryPanel id="SummaryPanel"/>
+<com.izforge.izpack.panels.InstallPanel id="InstallPanel"/>
+<com.izforge.izpack.panels.ProcessPanel id="ProcessPanel"/>
+<com.izforge.izpack.panels.FinishPanel id="FinishPanel"/>
+</AutomatedInstallation>
