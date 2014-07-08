@@ -57,7 +57,6 @@ See the tagged releases for the following versions of the product:
 - v1.0 - JBoss BPM Suite 6.0.2, JBoss EAP 6.1.1, S-Ramp 6.0.0, and rewards demo installed.
 
 
-![Process](https://github.com/eschabell/bpms-rewards-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
+![Process](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
 
-![Process & Task Dashboard](https://github.com/eschabell/bpms-customer-evaluation-demo/blob/master/docs/demo-images/mock-bpm-data.png?raw=true)
 
