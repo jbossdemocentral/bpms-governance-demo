@@ -34,8 +34,8 @@ background (note that BPM Suite is started with a port offset of 100).
 
    Upload maven artifact by importing into s-ramp-ui as type KieJarArtifact.
 
-   This should start a process and put a task in place for approving the artifact, if you do it will be promoted from /tmp/dev to
-   /tmp/qa.
+   This should start a process and put a task in place for approving the artifact, 
+   if you do it will be promoted from /tmp/dev to /tmp/qa.
    ```
 
 Notes
