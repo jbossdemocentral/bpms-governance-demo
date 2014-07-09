@@ -1,5 +1,11 @@
 JBoss BPM Suite Governance Demo
 ===============================
+This project fully automates the install of JBoss BPM Suite into an EAP instance and on a separate EAP instance the S-RAMP + DTGov based governance 
+tooling. It requires only that you add the governance tooling credentials to your central maven settings before you run the
+installation.
+
+When finished, both instances will be running and you can follow the instrctions to login, build artifacts, upload them to the
+governance suite, deploy them on dev, promote them to the next level (qa) and so on. For details see instructions below.
 
 
 Quickstart
