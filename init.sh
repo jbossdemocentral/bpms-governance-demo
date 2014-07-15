@@ -82,7 +82,7 @@ mv target/jboss-eap-6.1 target/jboss-eap-6.1.dtgov
 
 echo "  - copy in property for monitoring dtgov queries..."
 echo 
-cp $SUPPORT_DIR/dtgov.properties $JBOSS_HOME_DTGOV/standalone/configure
+cp $SUPPORT_DIR/dtgov.properties $JBOSS_HOME_DTGOV/standalone/configuration
 
 # Unzip the JBoss EAP instance.
 echo Unpacking new JBoss Enterprise EAP 6...
