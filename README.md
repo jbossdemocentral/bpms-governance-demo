@@ -49,6 +49,12 @@ Notes
 The s-ramp process includes an email node that will not work unless you have smtp configured. An easy tool to help run this is a
 single java jar project called FakeSMTP (http://nilhcem.github.io/FakeSMTP).
 
+Both SRAMP and BPM Suite servers are started in the background, if you want to end the demo, please don't forget to kill the
+processes running in the background by finding all java processes:
+
+```
+$ ps ax | grep java
+```
 
 Supporting Articles
 -------------------
