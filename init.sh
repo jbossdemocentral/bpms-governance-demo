@@ -166,7 +166,7 @@ $SERVER_BIN_DTGOV/s-ramp.sh -f support/sramp-dtgovwf-upload.txt
 
 echo
 echo "  Now you can open Business Central to view process project in business central in your "
-echo "browser at:
+echo "browser at:"
 echo
 echo "      http://localhost:8180/business-central     u:erics/p:bpmsuite"
 echo 
