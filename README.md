@@ -46,7 +46,7 @@ Follow the instructions on the screen to start JBoss BPM Suite server and S-RAMP
 Notes
 -----
 The s-ramp process includes an email node that will not work unless you have smtp configured (process will continue without SMTP). 
-An easy tool to help run this is a single java jar project called FakeSMTP (http://nilhcem.github.io/FakeSMTP).
+An easy tool to help run this is a [single java jar project called FakeSMTP](http://nilhcem.github.io/FakeSMTP).
 
 
 Supporting Articles
