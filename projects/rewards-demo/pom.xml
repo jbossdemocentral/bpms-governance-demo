@@ -47,6 +47,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+	<!-- Locations for deploying our project into s-ramp repository. -->
 	<distributionManagement>
     <repository>
       <id>local-sramp-repo</id>
@@ -69,6 +70,8 @@
         <extensions>true</extensions>
       </plugin>
     </plugins>
+
+		<!-- This is the wagon for deployments being pushed to our defined s-ramp repositories -->
     <extensions>
       <extension>
         <groupId>org.overlord.sramp</groupId>
