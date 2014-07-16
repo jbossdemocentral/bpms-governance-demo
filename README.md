@@ -35,11 +35,21 @@ Follow the instructions on the screen to start JBoss BPM Suite server and S-RAMP
 
    Login to http://localhost:8080/s-ramp-ui         (u:erics / p:bpmsuite1!)
 
-   Build and deploy project in business central.
+   As a developer you have a modified project pom.xml (found in projects/rewards-demo)
+   which includes an s-ramp wagon and s-ramp repsitory locations for transporting any
+   artifacts we build with 'mvn deploy'.
 
-   This should start a process and put a task in place for approving the artifact, 
-   if you do it will be promoted from /tmp/dev to /tmp/qa on the filesystem as demo
-   example of promoting through your deployment infrastructure.
+        $ mvn deploy -f projects/rewards-demo/pom.xml
+
+   The rewards project now has been deployed in s-ramp repository where you can view
+   the artifacts and see that the governance process in the s-ramp was automatically
+   started. Claim the approval task in dashboard available in your browser and see the
+   rewards artifact deployed in /tmp/dev copied to /tmp/qa upon approval:
+
+        http://localhost:8080/s-ramp-ui            u:erics/p:bpmsuite1!       
+
+   The example of promoting through dev to qa to stage to prod is an example of using
+   a local filesystem for this demo.
    ```
 
 
