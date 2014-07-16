@@ -65,7 +65,6 @@ See the tagged releases for the following versions of the product:
 ![Process](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
 ![Artifacts](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-artifacts.png?raw=true)
 ![Email](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-email-notify.png?raw=true)
-![Deployed QA](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/dtgov-deploy-qa.png?raw=true)
 ![Import](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-import-rewards.png?raw=true)
 ![Deploy S-RAMP Process](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-process-upload.png?raw=true)
 
