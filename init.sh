@@ -137,29 +137,17 @@ echo "After starting server you need to upload the DTGOV workflows with:"
 echo
 echo "$ $SERVER_BIN_DTGOV/s-ramp.sh -f support/sramp-dtgovwf-upload.txt"
 echo
-echo "Going to wait 5 mins for servers to start..."
+echo "Going to wait for servers to start..."
 echo
 
-# Watch a spinner while waiting for servers to start.
-for i in {1..12} # 2 minutes
-do
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: \|
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: /
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: -
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: \\
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: \|
-	sleep 2s
+# wait for for servers to start
+sleep 5
+while [ $($SERVER_BIN_DTGOV/jboss-cli.sh -c --commands='read-attribute server-state') != "running" ]; do
+	echo '======= Waiting for servers to start ========='
+	sleep 5
 done
 
+echo "Servers started. Proceeding with S-RAMP Repository seeding."
 clear
 echo
 $SERVER_BIN_DTGOV/s-ramp.sh -f support/sramp-dtgovwf-upload.txt
@@ -179,3 +167,9 @@ echo
 echo "$PRODUCT $VERSION $DEMO Setup Complete."
 echo
 
+# wait for user input to shutdonw the servers
+read -p "Server started. Press any key to shutdown the servers..."
+
+# stop both servers
+$SERVER_BIN/jboss-cli.sh --connect controller=localhost:10099 command=:shutdown
+$SERVER_BIN_DTGOV/jboss-cli.sh --connect command=:shutdown
