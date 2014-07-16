@@ -100,7 +100,7 @@ MOVE target/jboss-eap-6.1 target/jboss-eap-6.1.dtgov
 
 echo - copy in property for monitoring dtgov queries...
 echo. 
-xcopy /Y /Q %SUPPORT_DIR%/dtgov.properties %JBOSS_HOME_DTGOV%/standalone/configure
+xcopy /Y /Q %SUPPORT_DIR%/dtgov.properties %JBOSS_HOME_DTGOV%/standalone/configuration
 
 REM Unzip the required files from JBoss product deployable.
 echo Unpacking %PRODUCT% %VERSION%...
@@ -136,31 +136,41 @@ xcopy /Y /Q  %SUPPORT_DIR%/dtgovwf-pom.xml %PRJ_DTGOVWF%/pom.xml
 mvn -f %PRJ_DTGOVWF%/pom.xml package
 xcopy %PRJ_DTGOVWF%/target/%DTGOVWF% %SUPPORT_DIR%
 
+REM Final instructions to user to start and run demo.
 echo.
-echo You can now start the %PRODUCT% in a console with %SERVER_BIN%/standalone.sh -Djboss.socket.binding.port-offset=100
-echo.
-
-echo.
-echo "You can now start the S-RAMP server in another console with %SERVER_BIN_DTGOV%/standalone.bat"
-echo.
-
-echo.
-echo After starting server you need to upload the DTGOV workflows with:
-echo
-echo    %SERVER_BIN_DTGOV%/s-ramp.bat -f support/sramp-dtgovwf-upload.txt
-echo
-
-echo.
-echo Now you can open Business Central to view process project in business central in your browser at:
-echo.
-echo     http://localhost:8180/business-central     u:erics/p:bpmsuite
-echo. 
-echo This is where you can build and deploy the process project to create a deployment artifact.
-echo This artifact you will then import into the governance process via the S-RAMP administration
-echo dashboard available in your browser at:
-echo.
-echo     http://localhost:8080/s-ramp-ui            u:erics/p:bpmsuite1!"
-echo.
-echo %PRODUCT% %VERSION% %DEMO% Setup Complete.
+echo ===============================================================================================
+echo =                                                                                             = 
+echo =  Start the BPM Suite:                                                                       =
+echo =                                                                                             = 
+echo =        $ %SERVER_BIN%/standalone.sh -Djboss.socket.binding.port-offset=100    =
+echo =                                                                                             = 
+echo =  In seperate terminal start the S-RAMP server:                                              =
+echo =                                                                                             = 
+echo =        $ %SERVER_BIN_DTGOV%/standalone.sh                                     =
+echo =                                                                                             = 
+echo =  After starting server you need to upload the DTGOV workflows with following command:       =
+echo =                                                                                             = 
+echo =        $ %SERVER_BIN_DTGOV%/s-ramp.sh -f support/sramp-dtgovwf-upload.txt     =
+echo =                                                                                             = 
+echo =  Now open Business Central to view rewards process in your browser at:                      =
+echo =                                                                                             = 
+echo =        http://localhost:8180/business-central     u:erics/p:bpmsuite                        =
+echo =                                                                                             = 
+echo =  As a developer you have a modified project pom.xml (found in projects/rewards-demo)        =
+echo =  which includes an s-ramp wagon and s-ramp repsitory locations for transporting any         =
+echo =  artifacts we build with 'mvn deploy'.                                                      =
+echo =                                                                                             = 
+echo =        $ mvn deploy -f projects/rewards-demo/pom.xml                                        =
+echo =                                                                                             = 
+echo =  The rewards project now has been deployed in s-ramp repository where you can view          = 
+echo =  the artifacts and see that the governance process in the s-ramp was automatically          =
+echo =  started. Claim the approval task in dashboard available in your browser and see the        =
+echo =  rewards artifact deployed in /tmp/dev copied to /tmp/qa upon approval:                     =
+echo =                                                                                             = 
+echo =        http://localhost:8080/s-ramp-ui            u:erics/p:bpmsuite1!                      =
+echo =                                                                                             = 
+echo =  %DEMO% Setup Complete.                                                    =
+echo =                                                                                             = 
+echo ==============================================================================================="
 echo.
 
