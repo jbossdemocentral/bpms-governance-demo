@@ -23,24 +23,24 @@ VERSION=6.0.2
 clear 
 
 echo
-echo "#################################################################"
-echo "##                                                             ##"   
-echo "##  Setting up the ${DEMO}                     ##"
-echo "##                                                             ##"   
-echo "##                                                             ##"   
-echo "##     ####  ####   #   #      ### #   # ##### ##### #####     ##"
-echo "##     #   # #   # # # # #    #    #   #   #     #   #         ##"
-echo "##     ####  ####  #  #  #     ##  #   #   #     #   ###       ##"
-echo "##     #   # #     #     #       # #   #   #     #   #         ##"
-echo "##     ####  #     #     #    ###  ##### #####   #   #####     ##"
-echo "##                                                             ##"   
-echo "##                                                             ##"   
-echo "##  brought to you by,                                         ##"   
-echo "##             ${AUTHORS}                     ##"
-echo "##                                                             ##"   
-echo "##  ${PROJECT}             ##"
-echo "##                                                             ##"   
-echo "#################################################################"
+echo "#########################################################################"
+echo "##                                                                     ##"   
+echo "##  Setting up the ${DEMO}                             ##"
+echo "##                                                                     ##"   
+echo "##                                                                     ##"   
+echo "##     ####  ####   #   #   ###       ###  ##### ####   ###  #    #    ##"   
+echo "##     #   # #   # # # # # #      #   #  #   #   #     #   # #    #    ##"
+echo "##     ####  ####  #  #  #  ##   ###  #  #   #   #  ## #   # #    #    ##"
+echo "##     #   # #     #     #    #   #   #  #   #   #   # #   #  #  #     ##"
+echo "##     ####  #     #     # ###        ###    #   #####  ###    ##      ##"
+echo "##                                                                     ##"   
+echo "##                                                                     ##"   
+echo "##  brought to you by,                                                 ##"   
+echo "##             ${AUTHORS}                             ##"
+echo "##                                                                     ##"   
+echo "##  ${PROJECT}                  ##"
+echo "##                                                                     ##"   
+echo "#########################################################################"
 echo
 
 command -v mvn -q >/dev/null 2>&1 || { echo >&2 "Maven is required but not installed yet... aborting."; exit 1; }
@@ -122,60 +122,33 @@ cp $SUPPORT_DIR/dtgovwf-pom.xml $PRJ_DTGOVWF/pom.xml
 mvn -f $PRJ_DTGOVWF/pom.xml package
 cp $PRJ_DTGOVWF/target/$DTGOVWF $SUPPORT_DIR
 
+# Final instructions to user to start and run demo.
 echo
-echo "You can now start the $PRODUCT with $SERVER_BIN/standalone.sh -Djboss.socket.binding.port-offset=100"
+echo "==============================================================================================="
+echo "|                                                                                             |" 
+echo "|  Start the BPM Suite:                                                                       |"
+echo "|                                                                                             |" 
+echo "|        $ $SERVER_BIN/standalone.sh -Djboss.socket.binding.port-offset=100    |"
+echo "|                                                                                             |" 
+echo "|  In seperate terminal start the S-RAMP server:                                              |"
+echo "|                                                                                             |" 
+echo "|        $ $SERVER_BIN_DTGOV/standalone.sh                                     |"
+echo "|                                                                                             |" 
+echo "|  After starting server you need to upload the DTGOV workflows with following command:       |"
+echo "|                                                                                             |" 
+echo "|        $ $SERVER_BIN_DTGOV/s-ramp.sh -f support/sramp-dtgovwf-upload.txt     |"
+echo "|                                                                                             |" 
+echo "|  Now open Business Central to view rewards process in your browser at:                      |"
+echo "|                                                                                             |" 
+echo "|        http://localhost:8180/business-central     u:erics/p:bpmsuite                        |"
+echo "|                                                                                             |" 
+echo "|  Build & deploy the rewards project to create a deployment artifact in S-RAMP repository    |" 
+echo "|  where you can View artifacts that have started the governance process in the S-RAMP        |"
+echo "|  admisitration dashboard available in your browser:                                         |"
+echo "|                                                                                             |" 
+echo "|        http://localhost:8080/s-ramp-ui            u:erics/p:bpmsuite1!                      |"
+echo "|                                                                                             |" 
+echo "|  $DEMO Setup Complete.                                                    |"
+echo "|                                                                                             |" 
+echo "==============================================================================================="
 echo
-$SERVER_BIN/standalone.sh -Djboss.socket.binding.port-offset=100 >/dev/null &
-
-echo
-echo "You can now start the S-RAMP server with $SERVER_BIN_DTGOV/standalone.sh"
-echo
-$SERVER_BIN_DTGOV/standalone.sh >/dev/null &
-
-echo
-echo "After starting server you need to upload the DTGOV workflows with:"
-echo
-echo "$ $SERVER_BIN_DTGOV/s-ramp.sh -f support/sramp-dtgovwf-upload.txt"
-echo
-echo "Going to wait 5 mins for servers to start..."
-echo
-
-# Watch a spinner while waiting for servers to start.
-for i in {1..12} # 2 minutes
-do
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: \|
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: /
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: -
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: \\
-	sleep 2s
-	clear
-	echo Watch spinner, working hard in background for 2 minutes: \|
-	sleep 2s
-done
-
-clear
-echo
-$SERVER_BIN_DTGOV/s-ramp.sh -f support/sramp-dtgovwf-upload.txt
-
-echo
-echo "  Now you can open Business Central to view process project in business central in your "
-echo "browser at:"
-echo
-echo "      http://localhost:8180/business-central     u:erics/p:bpmsuite"
-echo 
-echo "This is where you can build and deploy the process project to create a deployment artifact." 
-echo "This artifact you will then import into the governance process via the S-RAMP administration"
-echo "dashboard available in your browser at:"
-echo
-echo "      http://localhost:8080/s-ramp-ui            u:erics/p:bpmsuite1!"
-echo
-echo "$PRODUCT $VERSION $DEMO Setup Complete."
-echo
-

@@ -28,8 +28,7 @@ Quickstart
 
 4. Run 'init.sh'.
 
-You will see a spinner with wait message, after 2 minutes both JBoss BPM Suite and S-RAMP products will have been started in the
-background (note that BPM Suite is started with a port offset of 100).
+Follow the instructions on the screen to start JBoss BPM Suite server and S-RAMP server.
 
    ```
    Login to http://localhost:8180/business-central  (u:erics / p:bpmsuite).
@@ -38,23 +37,17 @@ background (note that BPM Suite is started with a port offset of 100).
 
    Build and deploy project in business central.
 
-   Upload maven artifact by importing into s-ramp-ui as type KieJarArtifact.
-
    This should start a process and put a task in place for approving the artifact, 
-   if you do it will be promoted from /tmp/dev to /tmp/qa.
+   if you do it will be promoted from /tmp/dev to /tmp/qa on the filesystem as demo
+   example of promoting through your deployment infrastructure.
    ```
+
 
 Notes
 -----
-The s-ramp process includes an email node that will not work unless you have smtp configured. An easy tool to help run this is a
-single java jar project called FakeSMTP (http://nilhcem.github.io/FakeSMTP).
+The s-ramp process includes an email node that will not work unless you have smtp configured (process will continue without SMTP). 
+An easy tool to help run this is a single java jar project called FakeSMTP (http://nilhcem.github.io/FakeSMTP).
 
-Both SRAMP and BPM Suite servers are started in the background, if you want to end the demo, please don't forget to kill the
-processes running in the background by finding all java processes:
-
-```
-$ ps ax | grep java
-```
 
 Supporting Articles
 -------------------
