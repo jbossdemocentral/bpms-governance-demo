@@ -1,0 +1,22 @@
+
+<form id="1055273805">
+<property name="subject" value=""/>
+<property name="name" value="Award.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="award_amount" type="InputTextInteger" id="186359">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;amount (award)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="award/amount"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="1" name="award_explaination" type="InputText" id="1105831022">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;explaination (award)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="award/explaination"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="" name="#B29FE4" type="dataModelerEntry" outId="award" value="com.redhat.jboss.hr.rewards.Award" id="award"/>
+</form>

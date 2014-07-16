@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.redhat.jboss.hr</groupId>
+  <artifactId>rewards</artifactId>
+  <version>1.0</version>
+  <packaging>kjar</packaging>
+  <name>rewards</name>
+
+  <repositories>
+    <repository>
+      <id>guvnor-m2-repo</id>
+      <name>Guvnor M2 Repo</name>
+      <url>http://localhost:8080/business-central/maven2/</url>
+    </repository>
+		<repository>
+			<id>jboss-maven-repository</id>
+			<name>JBoss Maven Repository</name>
+			<url>http://maven.repository.redhat.com/techpreview/all/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jboss-maven-repository</id>
+			<name>JBoss Maven Repository</name>
+			<url>http://maven.repository.redhat.com/techpreview/all/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+    <repository>
+      <id>local-sramp-repo</id>
+      <name>S-RAMP Releases Repository</name>
+      <url>sramp://localhost:8080/s-ramp-server/?artifactType=KieJarArchive</url>
+    </repository>
+    <snapshotRepository>
+      <id>local-sramp-repo-snapshots</id>
+      <name>S-RAMP Snapshots Repository</name>
+      <url>sramp://localhost:8080/s-ramp-server/?artifactType=KieJarArchive</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>6.0.3-redhat-4</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.overlord.sramp</groupId>
+        <artifactId>s-ramp-wagon</artifactId>
+      </extension>
+    </extensions>
+  </build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<version>6.0.3-redhat-4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-bpmn2</artifactId>
+			<version>6.0.3-redhat-4</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies> 
+
+</project>
