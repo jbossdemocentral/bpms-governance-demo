@@ -11,7 +11,7 @@ governance suite, deploy them on dev, promote them to the next level (qa) and so
 Quickstart
 ----------
 
-1. Clone project.
+1. [Downloadn and unzip.](https://github.com/eschabell/bpms-governance-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
