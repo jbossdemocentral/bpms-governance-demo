@@ -61,7 +61,7 @@ An easy tool to help run this is a [single java jar project called FakeSMTP](htt
 
 Supporting Articles
 -------------------
-None yet...
+[Design time governance with DTGov integration with JBoss BPM Suite demo](http://www.schabell.org/2014/08/design-time-governance-dtgov-bpmsuite-demo.html)
 
 
 Released versions
