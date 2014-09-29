@@ -26,12 +26,12 @@ Quickstart
    </server>
    ```
 
-4. Run 'init.sh'.
+4. Run 'init.sh' or 'init.bat'.
 
 Follow the instructions on the screen to start JBoss BPM Suite server and S-RAMP server.
 
    ```
-   Login to http://localhost:8180/business-central  (u:erics / p:bpmsuite).
+   Login to http://localhost:8180/business-central  (u:erics / p:bpmsuite1!).
 
    Login to http://localhost:8080/s-ramp-ui         (u:erics / p:bpmsuite1!)
 
@@ -69,7 +69,9 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v1.0 - JBoss BPM Suite 6.0.2, JBoss EAP 6.1.1, S-Ramp 6.0.0, and rewards demo installed.
+- v1.1 - JBoss BPM Suite 6.0.3 installer, S-RAMP 6.0.0 and rewards demo installed.
+
+- v1.0 - JBoss BPM Suite 6.0.2, JBoss EAP 6.1.1, S-RAMP 6.0.0, and rewards demo installed.
 
 
 ![Process](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
