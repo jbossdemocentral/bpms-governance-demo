@@ -19,11 +19,13 @@ Quickstart
 
    ```
    <!-- Added for BPM Suite Governance demo -->
-   <server>
-     <id>local-sramp-repo</id>
-     <username>erics</username>
-     <password>bpmsuite1!</password>
-   </server>
+   <servers>
+      <server>
+         <id>local-sramp-repo</id>
+         <username>erics</username>
+         <password>bpmsuite1!</password>
+      </server>
+   </servers>
    ```
 
 4. Run 'init.sh' or 'init.bat'.
