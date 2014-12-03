@@ -11,7 +11,7 @@ governance suite, deploy them on dev, promote them to the next level (qa) and so
 Quickstart
 ----------
 
-1. [Downloadn and unzip.](https://github.com/eschabell/bpms-governance-demo/archive/master.zip)
+1. [Downloadn and unzip.](https://github.com/jbossdemocentral/bpms-governance-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
@@ -71,14 +71,16 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
+- v1.1 - moved to JBoss Demo Central.
+
 - v1.1 - JBoss BPM Suite 6.0.3 installer, S-RAMP 6.0.0 and rewards demo installed.
 
 - v1.0 - JBoss BPM Suite 6.0.2, JBoss EAP 6.1.1, S-RAMP 6.0.0, and rewards demo installed.
 
 
-![Process](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
-![Artifacts](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-artifacts.png?raw=true)
-![Email](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-email-notify.png?raw=true)
-![Import](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-import-rewards.png?raw=true)
-![Deploy S-RAMP Process](https://github.com/eschabell/bpms-governance-demo/blob/master/docs/demo-images/sramp-process-upload.png?raw=true)
+![Process](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
+![Artifacts](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/sramp-artifacts.png?raw=true)
+![Email](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/sramp-email-notify.png?raw=true)
+![Import](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/sramp-import-rewards.png?raw=true)
+![Deploy S-RAMP Process](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/sramp-process-upload.png?raw=true)
 

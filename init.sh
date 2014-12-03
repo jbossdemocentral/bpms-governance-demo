@@ -1,7 +1,7 @@
 #!/bin/sh 
 DEMO="Governance (DTGov) Demo"
 AUTHORS="Kurt Stam, Stefan Bunciak, Eric D. Schabell"
-PROJECT="git@github.com:eschabell/bpms-governance-demo.git"
+PROJECT="git@github.com:jbossdemocentral/bpms-governance-demo.git"
 PRODUCT="JBoss BPM Suite Governance"
 JBOSS_HOME=./target/jboss-eap-6.1
 JBOSS_HOME_DTGOV=./target/jboss-eap-6.1.dtgov
@@ -37,7 +37,7 @@ echo "##                                                                     ##"
 echo "##  brought to you by,                                                 ##"   
 echo "##             ${AUTHORS}             ##"
 echo "##                                                                     ##"   
-echo "##  ${PROJECT}                  ##"
+echo "##  ${PROJECT}           ##"
 echo "##                                                                     ##"   
 echo "#########################################################################"
 echo

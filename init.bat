@@ -4,7 +4,7 @@ setlocal
 set PROJECT_HOME=%~dp0
 set DEMO=Governance (DTGov) Demo
 set AUTHORS=Kurt Stam, Stefan Bunciak, Eric D. Schabell
-set PROJECT=git@github.com:eschabell/bpms-governace-demo.git
+set PROJECT=git@github.com:jbossdemocentral/bpms-governace-demo.git
 set PRODUCT=JBoss BPM Suite Governance
 set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.1
 set JBOSS_HOME_DTGOV=%PROJECT_HOME%\target\jboss-eap-6.1.dtgov
@@ -40,7 +40,7 @@ echo ##                                                                     ##
 echo ##  brought to you by,                                                 ##   
 echo ##             %AUTHORS%             ##
 echo ##                                                                     ##
-echo ##  %PROJECT%                  ##
+echo ##  %PROJECT%           ##
 echo ##                                                                     ##
 echo #########################################################################
 echo.
