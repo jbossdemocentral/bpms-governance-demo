@@ -69,9 +69,9 @@ fi
 
 # Move the old JBoss instance, if it exists, to the OLD position.
 if [ -x $JBOSS_HOME_DTGOV ]; then
-	echo "  - existing JBoss BPMS product install detected..."
+	echo "  - existing JBoss S-RAMP product install detected..."
 	echo
-	echo "  - moving existing JBoss BPMS product install moved aside..."
+	echo "  - moving existing JBoss S-RAMP product install moved aside..."
 	echo
 	rm -rf $JBOSS_HOME_DTGOV.OLD
 	rm -rf ${TARGET_DIR}/client

@@ -28,7 +28,7 @@ Quickstart
    </servers>
    ```
 
-4. Run 'init.sh' or 'init.bat'.
+4. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges
 
 Follow the instructions on the screen to start JBoss BPM Suite server and S-RAMP server.
 
