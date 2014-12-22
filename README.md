@@ -71,7 +71,7 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v1.1 - moved to JBoss Demo Central.
+- v1.2 - moved to JBoss Demo Central and updated windows init.bat support.
 
 - v1.1 - JBoss BPM Suite 6.0.3 installer, S-RAMP 6.0.0 and rewards demo installed.
 
