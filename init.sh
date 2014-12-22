@@ -5,6 +5,7 @@ PROJECT="git@github.com:jbossdemocentral/bpms-governance-demo.git"
 PRODUCT="JBoss BPM Suite Governance"
 JBOSS_HOME=./target/jboss-eap-6.1
 JBOSS_HOME_DTGOV=./target/jboss-eap-6.1.dtgov
+TARGET_DIR=./target
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
 SERVER_BIN=$JBOSS_HOME/bin
@@ -55,14 +56,27 @@ else
 	exit
 fi
 
+
 # Move the old JBoss instance, if it exists, to the OLD position.
 if [ -x $JBOSS_HOME ]; then
-	echo "  - existing JBoss product install detected..."
+	echo "  - existing JBoss BPMS product install detected..."
 	echo
-	echo "  - moving existing JBoss product install moved aside..."
+	echo "  - moving existing JBoss BPMS product install moved aside..."
 	echo
 	rm -rf $JBOSS_HOME.OLD
 	mv $JBOSS_HOME $JBOSS_HOME.OLD
+fi
+
+# Move the old JBoss instance, if it exists, to the OLD position.
+if [ -x $JBOSS_HOME_DTGOV ]; then
+	echo "  - existing JBoss S-RAMP product install detected..."
+	echo
+	echo "  - moving existing JBoss S-RAMP product install moved aside..."
+	echo
+	rm -rf $JBOSS_HOME_DTGOV.OLD
+	rm -rf ${TARGET_DIR}/client
+	rm -f ${TARGET_DIR}/server.keystore.jks
+	mv $JBOSS_HOME_DTGOV $JBOSS_HOME_DTGOV.OLD
 fi
 
 # Run SRAMP + EAP installer.
