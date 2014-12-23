@@ -78,7 +78,7 @@ See the tagged releases for the following versions of the product:
 - v1.0 - JBoss BPM Suite 6.0.2, JBoss EAP 6.1.1, S-RAMP 6.0.0, and rewards demo installed.
 
 
-![[Overview video](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/overview-video.png?raw=true)](http://vimeo.com/ericschabell/bpms-governance-demo-overview)
+[![Overview video](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/overview-video.png?raw=true)](http://vimeo.com/ericschabell/bpms-governance-demo-overview)
 ![Process](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/dtgov-process.png?raw=true)
 ![Artifacts](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/sramp-artifacts.png?raw=true)
 ![Email](https://github.com/jbossdemocentral/bpms-governance-demo/blob/master/docs/demo-images/sramp-email-notify.png?raw=true)
