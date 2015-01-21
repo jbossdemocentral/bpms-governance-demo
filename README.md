@@ -64,6 +64,8 @@ Supporting Articles
 -------------------
 [Overview of Governance Integration with JBoss BPM Suite (video)](http://www.schabell.org/2014/12/overview-governance-integration-jboss-bpmsuite.html)
 
+[5 Handy Tips From JBoss BPM Suite For Release 6.0.3](http://www.schabell.org/2014/10/5-handy-tips-from-jboss-bpmsuite-release-603.html)
+
 [Design time governance with DTGov integration with JBoss BPM Suite demo](http://www.schabell.org/2014/08/design-time-governance-dtgov-bpmsuite-demo.html)
 
 
