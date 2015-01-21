@@ -8,9 +8,8 @@ When finished, both instances will be running and you can follow the instrctions
 governance suite, deploy them on dev, promote them to the next level (qa) and so on. For details see instructions below.
 
 
-Quickstart
-----------
-
+Install on your machine
+-----------------------
 1. [Downloadn and unzip.](https://github.com/jbossdemocentral/bpms-governance-demo/archive/master.zip)
 
 2. Add products to installs directory.
@@ -63,12 +62,13 @@ An easy tool to help run this is a [single java jar project called FakeSMTP](htt
 
 Supporting Articles
 -------------------
+[Overview of Governance Integration with JBoss BPM Suite (video)](http://www.schabell.org/2014/12/overview-governance-integration-jboss-bpmsuite.html)
+
 [Design time governance with DTGov integration with JBoss BPM Suite demo](http://www.schabell.org/2014/08/design-time-governance-dtgov-bpmsuite-demo.html)
 
 
 Released versions
 -----------------
-
 See the tagged releases for the following versions of the product:
 
 - v1.2 - moved to JBoss Demo Central and updated windows init.bat support.
