@@ -1,5 +1,8 @@
 JBoss BPM Suite Governance Demo
 ===============================
+
+*Deprecated: DTGov is nog longer part of the Red Hat JBoss BPMSuite platform. As such, this demo has been deprecated and will no longer be maintained*
+
 This project fully automates the install of JBoss BPM Suite into an EAP instance and on a separate EAP instance the S-RAMP + DTGov based governance 
 tooling. It requires only that you add the governance tooling credentials to your central maven settings before you run the
 installation.
